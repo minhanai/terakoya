@@ -13,15 +13,14 @@ function App() {
 
   const [value1,setValue1] = useState(0);
   const [value2,setValue2] = useState(0);
-  const [operator,setOperator] = useState("+");
-  const [response, setResponse] = useState([]);
+  const [operator,setOperator] = useState(1);
+  const [response, setResponse] = useState();
 
   const culc = () =>{
 
-      fetch(`https://hanashinagakunai.npkn.net/terakoya-culc/${value1}/${operator}/${value2}/`,
-      {headers: { 'napkin-account-api-key': '6870d725c8d443cbb9863841dd95ed41'}}) 
-         .then((res) => res.json())
-         .then((data) => {
+      fetch(`https://culculator.onrender.com/${value1}/${value2}/${operator}`)
+        .then((res) => res.json())   
+        .then((data) => {
             console.log(data);
             setResponse(data);
          })
@@ -36,10 +35,10 @@ function App() {
       <div className="App-body">
           <input className="value1" onChange = {(e) => setValue1(e.target.value)}/>
               <select onChange={(e) => setOperator(e.target.value)}>
-                <option value="+">+</option>
-                <option value="-">-</option>
-                <option value="×">×</option>
-                <option value="÷">÷</option>
+                <option value="1">+</option>
+                <option value="2">-</option>
+                <option value="3">×</option>
+                <option value="4">÷</option>
               </select>
           <input className="value2" onChange={(e) => setValue2(e.target.value)}/>
           =
