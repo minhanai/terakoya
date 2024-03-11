@@ -1,14 +1,5 @@
 import React, { useState } from 'react';
-// import axios from "axios";
 
-// const API_BASEURL = `https://hanashinagakunai.npkn.net/terakoya-culc/`;
-// const API_KEY = "6870d725c8d443cbb9863841dd95ed41";
-
-// const res = fetch(API_BASEURL, {
-//   headers: {
-//     "napkin-account-api-key": API_KEY
-//   }
-// })
 function App() {
 
   const [value1,setValue1] = useState(0);
