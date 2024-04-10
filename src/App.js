@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./App.scss";
 
 function App() {
 
@@ -22,23 +23,22 @@ function App() {
 
   return (
     <>
-    <div className="App">
-      <div className="App-body">
-          <input className="value1" onChange = {(e) => setValue1(e.target.value)}/>
-              <select onChange={(e) => setOperator(e.target.value)}>
-                <option value="1">+</option>
-                <option value="2">-</option>
-                <option value="3">×</option>
-                <option value="4">÷</option>
-              </select>
-          <input className="value2" onChange={(e) => setValue2(e.target.value)}/>
-          =
-          <input className="result" value={response}/>
-        <br />
-          <button onClick={culc} className="culc">計算</button>
-        <br />
+      <div className="parent">
+        <div className="culc">
+            <input className="value1" onChange = {(e) => setValue1(e.target.value)}/>
+                <select onChange={(e) => setOperator(e.target.value)}>
+                  <option value="1">+</option>
+                  <option value="2">-</option>
+                  <option value="3">×</option>
+                  <option value="4">÷</option>
+                </select>
+            <input className="value2" onChange={(e) => setValue2(e.target.value)}/>
+            =
+            <input className="result" value={response}/>
+            <button onClick={culc} className="button">CULCULATE</button>
+          <br />
+        </div>
       </div>
-    </div>
     </>
   );
 };

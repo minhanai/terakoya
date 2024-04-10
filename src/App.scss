@@ -1,0 +1,61 @@
+button {
+  margin:5px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+  font-size: 16px;
+	width: 160px;
+	padding: 1rem;
+	font-weight: bold;
+	border: 2px solid #27acd9;
+	color: #27acd9;
+  background: #ffffff;
+	border-radius: 10vh;
+	transition: 0.5s;
+}
+button:hover {
+	color: #fff;
+	background: #27acd9;
+}
+
+input{
+  margin:5px;
+  text-align: center;
+  font-size: 16px;
+  width:200px;
+  height:45px;
+  border: 2px solid #27acd9;
+	color: #27acd9;
+	border-radius: 10vh;
+	transition: 0.5s;
+}
+
+select{
+  margin:5px;
+  text-align: center;
+  font-size: 20px;
+  height:40px;
+  width:90px;
+  border: 2px solid #27acd9;
+	color: #27acd9;
+	border-radius: 10vh;
+	transition: 0.5s;
+}
+
+.parent {
+  height:100vh;
+  width: 100vw;
+  // background-color:rgb(240, 212, 174);
+  position: relative;
+}
+.culc {
+  position: absolute;
+  // vertical-align: bottom;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #27acd9;
+  font-size: 24px;
+  display: flex;
+  text-align: center;
+}
